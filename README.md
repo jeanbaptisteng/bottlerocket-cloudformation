@@ -16,9 +16,11 @@ The tools required to implement the whole cluster and workernode group is very s
 
 Both CloudFormation Template for *on-demand* instances autoscaling group and *spot* instances autoscaling group are availiable here: 
 
-> **[On-Demand Instance](https://sourceforge.net/p/bottlerocket-cloudformation/code/ci/master/tree/bottlerocket.yaml?format=raw)**
+**Yes, we support SPOT instances**
 
-> **[EC2 SPOT Instance](https://sourceforge.net/p/bottlerocket-cloudformation/code/ci/master/tree/bottlerocket-spot.yaml?format=raw)**
+**[On-Demand Instance](https://raw.githubusercontent.com/jeanbaptisteng/bottlerocket-cloudformation/master/bottlerocket.yaml)**
+ 
+**[SPOT Instance](https://raw.githubusercontent.com/jeanbaptisteng/bottlerocket-cloudformation/master/bottlerocket-spot.yaml)**
 
 
 ## **Quickstart** ##
