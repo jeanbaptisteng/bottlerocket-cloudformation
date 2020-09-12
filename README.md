@@ -91,7 +91,7 @@ This is licensed under GNU GENERAL PUBLIC LICENSE.
 
 # Components enhancing Kubernetes Cluster
 
-[**NodelocalDNS**](https://raw.githubusercontent.com/jeanbaptisteng/bottlerocket-cloudformation/master/plugins/NodeLocalDNS/README.md)
+[**NodelocalDNS**](https://github.com/jeanbaptisteng/bottlerocket-cloudformation/tree/master/plugins/NodeLocalDNS)
 
 
 
