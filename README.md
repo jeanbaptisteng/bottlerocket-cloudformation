@@ -7,23 +7,23 @@ This is an unoffical Cloudformation template to build BottleRocket-based of node
 Most of this is one-time setup. If you already have an EKS cluster, and familar with Cloudformation, please download the template and skip to the last step.
 
 
-**Dependencies**
+# Dependencies
 
 The tools required to implement the whole cluster and workernode group is very simple. Just the latest version of [awscli](https://aws.amazon.com/cli/) and web browser that can access AWS WebConsole is enough. 
 
 
-**Downloads** 
+# Downloads 
 
 Both CloudFormation Template for *on-demand* instances autoscaling group and *spot* instances autoscaling group are availiable here: 
 
-**Yes, we support SPOT instances**
+**Yes, we support SPOT instances!!!**
 
 **[On-Demand Instance](https://raw.githubusercontent.com/jeanbaptisteng/bottlerocket-cloudformation/master/bottlerocket.yaml)**
  
 **[SPOT Instance](https://raw.githubusercontent.com/jeanbaptisteng/bottlerocket-cloudformation/master/bottlerocket-spot.yaml)**
 
 
-## **Quickstart** ##
+# Quickstart
 **New EKS cluster Installation**
 
 1. Create EC2-role that include the follow permission in order to create and control the EKS cluster on the baston host
@@ -31,13 +31,13 @@ Both CloudFormation Template for *on-demand* instances autoscaling group and *sp
 		sts:\*
 		eks:\*
 		arn:aws:iam::aws:policy/AmazonEKSClusterPolicy
-
-
+		
 
 2. Create EKS-role that include the follow permission to allow EKS cluster to manage resources in EKS
 
 		arn:aws:iam::aws:policy/AmazonEKSClusterPolicy
 		arn:aws:iam::aws:policy/AmazonEKSServicePolicy
+		arn:aws:iam::aws:policy/AmazonEKSVPCResourceController
 
 3. Execute the following command to create a new EKS private cluster
 
@@ -49,7 +49,7 @@ Both CloudFormation Template for *on-demand* instances autoscaling group and *sp
 
 
 
-**BottleRocket WorkerNode Group setup**
+# BottleRocket WorkerNode Group setup
 
 1. Open [CloudFormation Webconsole](https://console.aws.amazon.com/cloudformation/) in Web Browser
 
@@ -84,5 +84,19 @@ Both CloudFormation Template for *on-demand* instances autoscaling group and *sp
 8. Apply the configuration. This command may take a few minutes to finish
 
 		kubectl apply -f aws-auth-cm.yaml
+
+# License
+
+This is licensed under GNU GENERAL PUBLIC LICENSE.
+
+# Components enhancing Kubernetes Cluster
+
+[**NodelocalDNS**](https://raw.githubusercontent.com/jeanbaptisteng/bottlerocket-cloudformation/master/plugins/NodeLocalDNS/README.md)
+
+
+
+# See also
+
+**[BottleRocket Official Quickstart guide](https://github.com/bottlerocket-os/bottlerocket/blob/develop/QUICKSTART-EKS.md)**
 
 

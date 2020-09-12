@@ -297,7 +297,7 @@ Parameters:
   NodeLabel: 
      Description: Addition node labels
      Type: String
-     Default: 'OS = "BottleRocket"'
+     Default: 'bottlerocket.aws/updater-interface-version = "1.0.1"'
 
   ClusterControlPlaneSecurityGroup:
     Description: The security group of the cluster control plane.
@@ -512,7 +512,7 @@ Resources:
            cluster-name = "${ClusterName}"
            
            [settings.kubernetes.node-labels]
-           lifecycle = "ondemand"
+           lifecycle = "spot"
            ${NodeLabel}
            
            [settings.host-containers.admin]
