@@ -294,7 +294,7 @@ Parameters:
   NodeLabel: 
      Description: Addition node labels
      Type: String
-     Default: 'bottlerocket.aws/updater-interface-version = "1.0.1"'
+     Default: 'bottlerocket = "1.0.1"'
          
   NodeGroupName:
     Description: Unique identifier for the Node Group.
