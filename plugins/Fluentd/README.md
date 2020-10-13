@@ -1,4 +1,4 @@
-# ** Fluentd on BottleRocket ** #
+# **Fluentd on BottleRocket** #
 
 ## Unofficial Fluentd configuration for Containerd Runtime WorkerNodes ##
 
