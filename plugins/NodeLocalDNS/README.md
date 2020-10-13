@@ -1,6 +1,6 @@
 # **NodelocalDNS** #
 
-## Unofficial NodeLocalDNS Configuration##
+## Unofficial NodeLocalDNS Configuration ##
 
 The origin design of Kubernetes pods did not implement DNS cache. NodeLocalDNS is Kubernetes component to cache DNS queries in each of the WorkerNode to accelerate the setup of network connections. 
 

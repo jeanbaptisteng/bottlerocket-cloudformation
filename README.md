@@ -92,7 +92,7 @@ This is licensed under GNU GENERAL PUBLIC LICENSE.
 # Components enhancing Kubernetes Cluster
 
 [**NodelocalDNS**](https://github.com/jeanbaptisteng/bottlerocket-cloudformation/tree/master/plugins/NodeLocalDNS)
-
+[**Fluentd**](https://github.com/jeanbaptisteng/bottlerocket-cloudformation/tree/master/plugins/Fluentd)
 
 
 # See also

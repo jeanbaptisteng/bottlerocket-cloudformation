@@ -292,7 +292,7 @@ Parameters:
      Type: String
   
   NodeLabel: 
-     Description: Addition node labels
+     Description: Addition node labels (key = "Value")
      Type: String
      Default: 'bottlerocket = "1.0.1"'
          
