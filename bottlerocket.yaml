@@ -15,7 +15,7 @@ Parameters:
 
   NodeImageIdSSMParam:
     Type: "AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>"
-    Default: /aws/service/bottlerocket/aws-k8s-1.17/x86_64/latest/image_id
+    Default: /aws/service/bottlerocket/aws-k8s-1.18/x86_64/latest/image_id
     Description: AWS Systems Manager Parameter Store parameter of the AMI ID for the worker node instances.
 
   NodeInstanceType:
@@ -294,7 +294,7 @@ Parameters:
   NodeLabel: 
      Description: Addition node labels (key = "Value")
      Type: String
-     Default: 'bottlerocket = "1.0.1"'
+     Default: 'bottlerocket = "1.0.2"'
          
   NodeGroupName:
     Description: Unique identifier for the Node Group.

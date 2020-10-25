@@ -26,18 +26,38 @@ Both CloudFormation Template for *on-demand* instances autoscaling group and *sp
 # Quickstart
 **New EKS cluster Installation**
 
-1. Create EC2-role that include the follow permission in order to create and control the EKS cluster on the baston host
-
-		sts:\*
-		eks:\*
-		arn:aws:iam::aws:policy/AmazonEKSClusterPolicy
-		
-
-2. Create EKS-role that include the follow permission to allow EKS cluster to manage resources in EKS
+1. Create EKS-role that include the follow permission to allow EKS cluster to manage resources in EKS (ie: arn:aws:iam::XXXXXXXXXX:role/eksServiceRole)
 
 		arn:aws:iam::aws:policy/AmazonEKSClusterPolicy
 		arn:aws:iam::aws:policy/AmazonEKSServicePolicy
 		arn:aws:iam::aws:policy/AmazonEKSVPCResourceController
+
+2. Create EC2-role that include the follow permission in order to create and control the EKS cluster on the baston host (ie: arn:aws:iam::XXXXXXXXX:role/eks-controller-prd)
+
+	Policy 1:
+	{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "sts:*",
+                "eks:*"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": "iam:*",
+            "Resource": "arn:aws:iam::XXXXXXXXXX:role/eksServiceRole"
+        }
+    ]
+	}
+
+	Policy 2: 
+	AmazonEKSClusterPolicy
+
+
 
 3. Execute the following command to create a new EKS private cluster
 
